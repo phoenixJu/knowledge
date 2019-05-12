@@ -1,4 +1,4 @@
-package main
+package filter
 
 import "testing"
 
@@ -9,11 +9,11 @@ func TestNewStraightPipeLine(t *testing.T) {
 	pipeLine := NewStraightPipeLine("processor", splitFilter, toIntFilter, sumFilter)
 	res, err := pipeLine.Process("1,2,3,4")
 	if err != nil{
-		t.Error("error result : %s", err.Error())
+		t.Errorf("error result : %s", err.Error())
 		return
 	}
 	if res != 10 {
-		t.Fatal("the expect is 10, but the result is %d", res)
+		t.Fatalf("the expect is 10, but the result is %d", res)
 	}
 
 }

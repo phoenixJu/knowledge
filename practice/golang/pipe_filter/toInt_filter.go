@@ -1,4 +1,4 @@
-package main
+package filter
 
 import (
 	"fmt"
@@ -22,7 +22,7 @@ func (f *ToIntFilter) Process(request Request) (response Response, err error) {
 	for _, i := range req {
 		r, err := strconv.Atoi(i)
 		if err != nil {
-			return
+			return nil, err
 		}
 		res = append(res, r)
 	}

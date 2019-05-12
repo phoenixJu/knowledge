@@ -1,4 +1,4 @@
-package main
+package filter
 /**
 pipe filter architecture
  */
