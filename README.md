@@ -1,9 +1,9 @@
 # knowledge 
-## 1. Algorithm
+## 1. algorithm
 >>
 the implement for regular algorithm practice
 >>
-## 2. Architecture
+## 2. architecture
 >>
 the knowledge of architecture and design
 >>
@@ -11,19 +11,19 @@ the knowledge of architecture and design
 >>
 the summary and methodology of leaning English
 >>
-## 4. Practise
+## 4. practise
 >>
 demos
 >>
-## 5. Share
+## 5. share
 >>
 shared knowledge
 >>
-## 6. Thought
+## 6. thought
 >>
 thought of something
 >>
-## 7. Tips
+## 7. tips
 >>
 tips of coding and efficiency
 >>
