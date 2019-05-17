@@ -1,15 +1,29 @@
-# knowledge
-## 1. algorithm
-对算法实现的积累，主要用golang实现
-## 2. architecture
-架构和架构相关的积累
-## 3. english
-英语相关的积累
-## 4. practise
-日常练手的小demo
-## 5. share
-分享的文章和内容
-## 6. thought
-想法
-## 7. tips
-编程技巧和提高编程效率的tips
+# knowledge 
+## 1. Algorithm
+>>
+the implement for regular algorithm practice
+>>
+## 2. Architecture
+>>
+the knowledge of architecture and design
+>>
+## 3. English
+>>
+the summary and methodology of leaning English
+>>
+## 4. Practise
+>>
+demos
+>>
+## 5. Share
+>>
+shared knowledge
+>>
+## 6. Thought
+>>
+thought of something
+>>
+## 7. Tips
+>>
+tips of coding and efficiency
+>>
