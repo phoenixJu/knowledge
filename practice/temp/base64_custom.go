@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/base64"
 	"fmt"
-	"personal/utils"
+	"knowledge/utils"
 )
 
 func main() {

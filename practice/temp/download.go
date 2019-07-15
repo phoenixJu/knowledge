@@ -1,7 +1,7 @@
 package main
 
 import (
-	"code.byted.org/gopkg/logs"
+	"golang.org/x/tools/go/ssa/interp/testdata/src/fmt"
 	"io"
 	"net/http"
 	"os"
@@ -10,7 +10,7 @@ import (
 func main()  {
 	res, _:= http.Get("http://music.163.com/song/media/outer/url?id=421244551.mp3")
 	if res.StatusCode >= 300 {
-		logs.Error("expect success status code. actual is %v", res.StatusCode)
+		fmt.Printf("expect success status code. actual is %v", res.StatusCode)
 		return
 	}
 	defer res.Body.Close()
