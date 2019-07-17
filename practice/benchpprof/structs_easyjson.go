@@ -1,4 +1,4 @@
-package main
+package benchpprof
 import (
 	json "encoding/json"
 	easyjson "github.com/mailru/easyjson"
