@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -6,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	_ "net/http/pprof"
+	"time"
 )
 
 func GetFibonacciSerie(n int) []int {
@@ -31,8 +31,17 @@ func createFBS(w http.ResponseWriter, r *http.Request) {
 
 }
 
+func forkGoroutine(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("processing request....")
+	go func() {
+		time.Sleep(30 * time.Duration(time.Second))
+		w.Write([]byte("ok"))
+	}()
+}
+
 func main() {
 	http.HandleFunc("/", index)
 	http.HandleFunc("/fb", createFBS)
+	http.HandleFunc("/multi",forkGoroutine)
 	log.Fatal(http.ListenAndServe(":8081", nil))
 }
