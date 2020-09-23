@@ -1,4 +1,4 @@
-package middleware
+package main
 
 import (
 	"fmt"
@@ -14,6 +14,16 @@ func Logging() MiddleWare {
 		return func(w http.ResponseWriter, r *http.Request) {
 			start := time.Now()
 			defer func() { log.Println(r.URL.Path, time.Since(start)) }()
+			f(w, r)
+			return
+		}
+	}
+}
+
+func Test() MiddleWare {
+	return func(f http.HandlerFunc) http.HandlerFunc {
+		return func(w http.ResponseWriter, r *http.Request) {
+			defer func() { log.Println(r.URL.Path, "test is ok") }()
 			f(w, r)
 			return
 		}
@@ -43,6 +53,6 @@ func Hello(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/", Chain(Hello, Method("GET"), Logging()))
+	http.HandleFunc("/", Chain(Hello, Method("GET"), Test(), Logging()))
 	_ = http.ListenAndServe(":8080", nil)
 }
