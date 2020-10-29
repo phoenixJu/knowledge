@@ -13,10 +13,10 @@ import (
 
 var hostName string
 
-var RemoteUrl = "http://%v:2281"
+var RemoteUrl = "http://%v:2280"
 
 func main() {
-	flag.StringVar(&hostName, "", "10.227.30.186", "host name")
+	flag.StringVar(&hostName, "", "10.224.14.161", "host name")
 	RemoteUrl = fmt.Sprintf(RemoteUrl, hostName)
 
 	r := gin.Default()
