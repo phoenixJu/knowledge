@@ -2,3 +2,4 @@
 vendor/
 *.prof
 *.svg
+/practice/test/*

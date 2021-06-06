@@ -4,6 +4,7 @@ go 1.12
 
 require (
 	cloud.google.com/go v0.40.0 // indirect
+	github.com/ahmetb/go-linq v2.0.0-rc0+incompatible
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/facebookgo/inject v0.0.0-20180706035515-f23751cae28b
 	github.com/facebookgo/structtag v0.0.0-20150214074306-217e25fb9691 // indirect
