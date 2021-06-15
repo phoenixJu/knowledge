@@ -14,6 +14,7 @@ const (
 	VideoModelExpireLong   = VideoModelExpireType(2)
 )
 
+
 func main()  {
 	cont := make([][]interface{}, 0)
 	row1 := make([]interface{}, 0)
@@ -22,8 +23,12 @@ func main()  {
 	row2 = append(row2, "nishishishishis")
 	cont = append(cont, row1)
 	cont = append(cont, row2)
-	str, _ := json.Marshal(cont)
+	var name1 []string
+	var name = make([]string, 0)
+	str, _ := json.Marshal(name1)
+	str1, _ := json.Marshal(name)
 	println(string(str))
+	println(string(str1))
 }
 
 
